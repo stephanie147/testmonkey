@@ -2,7 +2,6 @@ import {
     Injectable,
     NotFoundException
     } from '@nestjs/common';
-import { PostModel } from './posts.interface';
 
 @Injectable()
 export class PostsService {

@@ -12,8 +12,8 @@ export class PostsController {
     async getInfoDate(@Param('dateUse') dateUse: string): Promise<any> {
         var dateParts = dateUse.split("-");
         var date_traitement = new Date(+dateParts[0], +dateParts[1] - 1, +dateParts[2]);
-        // le lien de la documentation pour connaitre l'id de Paris ne fonctionne pas 
         var date_chiffre_romain = this.postsService.recupererDateChiffreRomain(date_traitement);
+        // le lien de la documentation pour connaitre l'id de Paris ne fonctionne pas 
         var london = 44418;
         var annee = dateParts[0];
         var mois = +dateParts[1] - 1;
