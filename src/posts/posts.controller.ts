@@ -19,8 +19,8 @@ export class PostsController {
         var mois = +dateParts[1] - 1;
         var jour = +dateParts[2];
         const response = await this.httpService.get(`https://www.metaweather.com/api/location/${london}/${annee}/${mois}/${jour}/`).toPromise();
-        var max_temp = Math.max.apply(Math, response.data.map(function(o) { return o.max_temp; }))
-        var min_temp = Math.min.apply(Math, response.data.map(function(o) { return o.min_temp; }))
-        return dateUse + " " + date_chiffre_romain + " " + "Max temperature London : " + max_temp + " Mini temperature London : " + min_temp
+        var max_temp = Math.max.apply(Math, response.data.map(function(o) { return o.max_temp; }));
+        var min_temp = Math.min.apply(Math, response.data.map(function(o) { return o.min_temp; }));
+        return dateUse + " " + date_chiffre_romain + " " + "Max temperature London : " + max_temp + " Mini temperature London : " + min_temp;
     }
 }
